@@ -1,0 +1,11 @@
+<ul>
+  @for (t of taches(); track t.id) {
+    <li>
+      <h3>{{ t.libelle }}</h3>
+      <p>{{ t.description }}</p>
+      <p>Status: {{ t.done ? 'Terminée' : 'Non terminée' }}</p>
+    </li>
+  } @empty {
+    <li>Aucune tâche disponible</li>
+  }
+</ul>
