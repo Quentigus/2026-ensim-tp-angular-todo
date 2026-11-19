@@ -1,0 +1,19 @@
+a {
+    display: block;
+
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+
+    border : 1px solid darkblue;
+    background-color: white;
+    &:hover {
+        background-color: aliceblue;
+    }
+    &:active {
+        background-color: lavender;
+    }
+    &:focus {
+    border-width : 2px;
+    }
+}

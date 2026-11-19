@@ -1,5 +1,7 @@
+<a [routerLink]="[]" [queryParams]="{ done: !showDone() }">{{this.showDone() ? 'Masquer les tâches terminées' : 'Toutes les taches'}}</a>
+
 <ul>
-  @for (t of taches(); track t.id) {
+  @for (t of tachesAffichees(); track t.id) {
     <li>
       <h3>{{ t.libelle }}</h3>
       <p>{{ t.description }}</p>
