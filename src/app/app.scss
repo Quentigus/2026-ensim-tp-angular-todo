@@ -1,0 +1,8 @@
+fieldset {
+  max-width: 300px;
+  margin: auto;
+
+  & + fieldset {
+    margin-top: 5rem;
+  }
+}

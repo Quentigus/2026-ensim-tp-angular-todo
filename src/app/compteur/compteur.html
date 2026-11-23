@@ -1,0 +1,12 @@
+<fieldset>
+  <legend>compteur.html</legend>
+
+  <!-- On pousse un -1 -->
+  <button (click)="compteur.update((v) => v - 1)">-</button>
+
+  <!-- On affiche la valeur actuelle -->
+  {{ compteur() }}
+
+  <!-- On pousse un +1 -->
+  <button (click)="compteur.update((v) => v + 1)">+</button>
+</fieldset>
