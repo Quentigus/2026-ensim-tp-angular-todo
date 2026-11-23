@@ -5,12 +5,19 @@
     <div>
       <label for="libelle">Libellé</label>
       <input id="libelle" type="text" [formField]="form.libelle" />
+      @if (form.libelle().dirty() && form.libelle().invalid()) {
+      <ul>
+        @for (error of form.libelle().errors(); track error) {
+          <li>{{ error.message }}</li>
+        }
+      </ul>
+    }
     </div>
     <div>
       <label for="description">Description</label>
       <textarea id="description" [formField]="form.description"></textarea>
     </div>
 
-    <button type="submit">Créer</button>
+    <button type="submit" [disabled]="!form().dirty() || form().invalid()">Créer</button>
   </form>
 </fieldset>
