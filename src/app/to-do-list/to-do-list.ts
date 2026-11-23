@@ -2,9 +2,10 @@ import { Component, computed, DestroyRef, inject, OnInit, signal } from '@angula
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { GestionTaches } from '../gestion-taches';
+import { Task } from './task/task';
 
 @Component({
-  imports: [RouterLink],
+  imports: [RouterLink, Task],
   selector: 'app-to-do-list',
   styleUrl: './to-do-list.scss',
   templateUrl: './to-do-list.html',

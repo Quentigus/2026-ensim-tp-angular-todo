@@ -2,14 +2,8 @@
   this.showDone() ? 'Masquer les tâches terminées' : 'Toutes les taches'
 }}</a>
 
-<ul>
-  @for (t of tachesAffichees(); track t.id) {
-    <li>
-      <h3>{{ t.libelle }}</h3>
-      <p>{{ t.description }}</p>
-      <p>Status: {{ t.done ? 'Terminée' : 'Non terminée' }}</p>
-    </li>
-  } @empty {
-    <li>Aucune tâche disponible</li>
-  }
-</ul>
+@for (t of tachesAffichees(); track t.id) {
+  <app-task [task]="t"></app-task>
+} @empty {
+  <li>Aucune tâche disponible</li>
+}
