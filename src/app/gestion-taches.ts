@@ -31,6 +31,19 @@ export class GestionTaches {
   ]);
   public readonly taches = this._taches.asReadonly();
 
+  ajouter(libelle: string, description?: string): void {
+    const nextId = Math.max(...this._taches().map((v) => v.id)) + 1;
+    this._taches.update((all) => [
+      ...all,
+      {
+        id: nextId,
+        libelle,
+        description: description ?? '',
+        done: false,
+      },
+    ]);
+  }
+
   toggle(id: number) {
     this._taches.update((all) => {
       return [

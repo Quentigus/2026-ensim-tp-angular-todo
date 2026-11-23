@@ -3,9 +3,10 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { GestionTaches } from '../gestion-taches';
 import { Task } from './task/task';
+import { AjoutTache } from './ajout-tache/ajout-tache';
 
 @Component({
-  imports: [RouterLink, Task],
+  imports: [RouterLink, Task, AjoutTache],
   selector: 'app-to-do-list',
   styleUrl: './to-do-list.scss',
   templateUrl: './to-do-list.html',

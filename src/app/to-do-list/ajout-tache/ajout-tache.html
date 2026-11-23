@@ -1,0 +1,16 @@
+<fieldset>
+  <legend>Créer une tâche</legend>
+
+  <form [formRoot]="form">
+    <div>
+      <label for="libelle">Libellé</label>
+      <input id="libelle" type="text" [formField]="form.libelle" />
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea id="description" [formField]="form.description"></textarea>
+    </div>
+
+    <button type="submit">Créer</button>
+  </form>
+</fieldset>
