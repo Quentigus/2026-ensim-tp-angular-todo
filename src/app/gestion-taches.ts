@@ -30,4 +30,14 @@ export class GestionTaches {
     },
   ]);
   public readonly taches = this._taches.asReadonly();
+
+  toggle(id: number) {
+    this._taches.update((all) => {
+      return [
+        ...all.map((t) => {
+          return t.id === id ? { ...t, done: !t.done } : t;
+        }),
+      ];
+    });
+  }
 }

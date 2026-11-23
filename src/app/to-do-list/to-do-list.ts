@@ -27,4 +27,8 @@ export class ToDoList implements OnInit {
       this.showDone.set(isShowDone);
     });
   }
+
+  toggle(id: number) {
+    this.gestionTaches.toggle(id);
+  }
 }

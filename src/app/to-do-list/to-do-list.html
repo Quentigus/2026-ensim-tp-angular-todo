@@ -3,7 +3,7 @@
 }}</a>
 
 @for (t of tachesAffichees(); track t.id) {
-  <app-task [task]="t"></app-task>
+  <app-task [task]="t" (terminee)="toggle($event)"></app-task>
 } @empty {
   <li>Aucune tâche disponible</li>
 }
